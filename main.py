@@ -55,7 +55,7 @@ for m in range(0, 경기장_끝 + 1, 2):
 스톤_높이 = 스톤.pos.y
 attach_light(스톤, offset=vector(0, 2, 0.8), color=vector(1, 0.95, 0.85), intensity=1.2)   # 스톤을 따라다니는 조명
 빠르기_글자 = label(pos=vector(0, 1.3, 0), text=f'{출발_빠르기:.1f} m/s', color=color.black, height=16)
-바닥_글자 = label(pos=vector(8, 3.2, -2), text='', color=vector(0.2, 0.2, 0.3), height=14)
+바닥_글자 = label(pos=vector(5, 3.2, -2), text='', color=vector(0.2, 0.2, 0.3), height=14)
 알림 = label(pos=vector(8, -1.5, 2.4), text='[스톤 밀기]를 누르세요', color=color.blue, height=15)
 
 def 바닥_바꾸기(값):                               # 숫자에 맞는 바닥으로 바꿔요(카펫 · 나무 마루 · 얼음)
@@ -146,4 +146,4 @@ while True:
         if 위치 > scene.center.x + 6:              # 스톤이 화면 오른쪽 끝에 가까워지면 화면이 따라가요
             scene.center = vector(위치 - 6, 0, 0)
     알림.pos = scene.center + vector(0, -1.5, 2.4)
-    바닥_글자.pos = scene.center + vector(0, 3.2, -2)
+    바닥_글자.pos = scene.center + vector(-3, 3.2, -2)
